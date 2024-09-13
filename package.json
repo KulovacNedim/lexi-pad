@@ -1,6 +1,5 @@
 {
-  "name": "@nedim/lexi-pad",
-  "private": false,
+  "name": "@nedimkulovac/lexi-pad",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/main.js",
