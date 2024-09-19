@@ -2,19 +2,43 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import tailwindcss from 'tailwindcss';
+
+import { peerDependencies } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    dts({
+      exclude: ['**/*.stories.ts', '**/*.test.ts'],
+    }),
+  ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/main.ts'),
+      entry: resolve(__dirname, 'lib/index.ts'),
       name: 'LexiPad',
-      formats: ['es'],
-      fileName: 'lexi-pad',
+      fileName: (format) => `index.${format}.js`,
+      formats: ['es', 'umd'],
     },
     rollupOptions: {
-      external: ['react', 'react/jsx-runtime'],
+      external: [
+        ...Object.keys(peerDependencies),
+        'react/jsx-runtime',
+        'tailwindcss',
+      ],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          tailwindcss: 'tailwindcss',
+        },
+      },
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [tailwindcss],
     },
   },
 });
