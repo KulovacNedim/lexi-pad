@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.lp-wrapper {
+  @apply w-full flex flex-col justify-between border border-gray-300 rounded space-y-1 p-3;
+}
+
+.col-reverse {
+  @apply flex-col-reverse;
+}

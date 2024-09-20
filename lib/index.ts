@@ -1,3 +1,1 @@
-import { Button } from './components/button';
-
-export { Button as MyButtonComponent };
+export { Editor } from './components/Editor';
