@@ -3,20 +3,21 @@ import { Pad } from '../Pad';
 import { Toolbar } from '../Toolbar';
 import { EditorConfig } from '../../types/editor';
 import { mergeToolbar } from '../../utils/toolbar-utils';
+import { RecursivePartial } from '../../types/recursive-partial';
 
-type EditorProps = Partial<EditorConfig>;
+type EditorProps = RecursivePartial<EditorConfig>;
 
 export const Editor = ({ className = '', toolbar }: EditorProps) => {
   const mergedToolbar = mergeToolbar(toolbar);
 
   const toolbarOnTop = {
-    'col-reverse': mergedToolbar.position === 'top',
+    'lp-col-reverse': mergedToolbar.position === 'top',
   };
 
   return (
     <div className={classNames('lp-wrapper', toolbarOnTop, className)}>
       <Pad />
-      <Toolbar />
+      {mergedToolbar.visible && <Toolbar groups={mergedToolbar.groups} />}
     </div>
   );
 };

@@ -1,3 +1,3 @@
 export const Pad = () => {
-  return <div>pad</div>;
+  return <div className='lp-pad'></div>;
 };
