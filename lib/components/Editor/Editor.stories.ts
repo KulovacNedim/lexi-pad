@@ -28,7 +28,7 @@ export const Main: Story = {
           hidden: false,
           commands: [{ name: 'bold' }],
         },
-        { name: 'link', position: 1 },
+        { name: 'alignment', position: 1 },
         // { name: 'test 3', position: 3, align: 'right' },
         // { name: 'test 4', position: 4, align: 'left' },
         // { name: 'test 5', position: 5 },

@@ -67,3 +67,10 @@ export const mergeToolbar = (
 ): ToolbarConfig => {
   return deepMerge(defaultToolbar, toolbar);
 };
+
+export const convertToCamelCase = (iconName: string) => {
+  return iconName
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('');
+};

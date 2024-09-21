@@ -54,3 +54,11 @@ export type ListCommand = {
 export type LinkCommand = {
   name: 'link' | 'unlink';
 } & ToolbarCommand;
+
+export type OneofToolbarCommand =
+  | HistoryCommand
+  | InlineCommand
+  | AlignmentCommand
+  | BlockCommand
+  | ListCommand
+  | LinkCommand;

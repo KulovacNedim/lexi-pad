@@ -609,8 +609,6 @@ video {
   height: 2rem;
   width: 100%;
   justify-content: space-between;
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .lp-command-groups {
@@ -639,17 +637,21 @@ video {
   margin-left: calc(0.125rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.lp-command-group {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
-}
-
 .lp-command {
+  display: flex;
   height: 1.75rem;
   width: 1.75rem;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  border-radius: 0.375rem;
+  border-radius: 0.25rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.lp-command:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }

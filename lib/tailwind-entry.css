@@ -15,7 +15,7 @@
 }
 
 .lp-toolbar {
-  @apply bg-blue-500 h-8 flex justify-between w-full;
+  @apply h-8 flex justify-between w-full;
 }
 
 .lp-command-groups {
@@ -23,9 +23,9 @@
 }
 
 .lp-command-group {
-  @apply bg-yellow-400 flex space-x-0.5 items-center;
+  @apply flex space-x-0.5 items-center;
 }
 
 .lp-command {
-  @apply bg-white w-7 h-7 overflow-hidden cursor-pointer rounded-md;
+  @apply w-7 h-7 overflow-hidden cursor-pointer rounded flex justify-center items-center hover:bg-gray-100 transition-colors;
 }
