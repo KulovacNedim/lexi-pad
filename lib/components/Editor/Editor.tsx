@@ -8,6 +8,8 @@ import { RecursivePartial } from '../../types/recursive-partial';
 type EditorProps = RecursivePartial<EditorConfig>;
 
 export const Editor = ({ className = '', toolbar }: EditorProps) => {
+  // TO-DO: only if the toolbar is visible
+  // TO-DO: memoize
   const mergedToolbar = mergeToolbar(toolbar);
 
   const toolbarOnTop = {

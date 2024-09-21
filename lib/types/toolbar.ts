@@ -1,7 +1,7 @@
-import { ToolbarItemGroup } from './toolbar-item-group';
+import { ToolbarGroup } from './toolbar-groups';
 
 export type ToolbarConfig = {
   position: 'top' | 'bottom';
   visible: boolean;
-  groups: ToolbarItemGroup[];
+  groups: ToolbarGroup[];
 };

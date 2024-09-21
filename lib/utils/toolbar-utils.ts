@@ -43,6 +43,7 @@ const deepMerge = <T>(defaultObj: T, userObj?: RecursivePartial<T>): T => {
     if (userObj[key] !== undefined) {
       if (Array.isArray(userObj[key])) {
         // Merge arrays (e.g. items or groups)
+
         merged[key] = mergeArray(
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           defaultObj[key] as any[],

@@ -20,24 +20,31 @@ export const Main: Story = {
     toolbar: {
       position: 'bottom',
       groups: [
-        { name: 'history', position: 6 },
-        { name: 'test group', position: 2 },
-        { name: 'test 2', position: 3 },
+        { name: 'history', position: 6, align: 'right' },
+        {
+          name: 'inline',
+          position: 2,
+          align: 'right',
+          hidden: false,
+          commands: [{ name: 'bold' }],
+        },
+        { name: 'link', position: 1 },
+        // { name: 'test 3', position: 3, align: 'right' },
+        // { name: 'test 4', position: 4, align: 'left' },
+        // { name: 'test 5', position: 5 },
       ],
     },
   },
 };
 
-// TO-DO: define types as enums
+export const ToolbarOnTop: Story = {
+  args: {
+    toolbar: { position: 'top' },
+  },
+};
 
-// export const ToolbarOnTop: Story = {
-//   args: {
-//     toolbar: { position: 'top' },
-//   },
-// };
-
-// export const HiddenToolbar: Story = {
-//   args: {
-//     toolbar: { visible: false },
-//   },
-// };
+export const HiddenToolbar: Story = {
+  args: {
+    toolbar: { visible: false },
+  },
+};
