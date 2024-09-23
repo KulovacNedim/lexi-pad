@@ -17,12 +17,10 @@ export const Toolbar = ({ groups }: ToolbarProps) => {
     .sort((a, b) => a.position - b.position);
 
   // TO-DO next:
-  // line in betwen of groups
   // responsive
-  // items can be grouped into a dripdown
+  // selected state for commands
   // add the hiden prop to itmes too
   // Popup should not be part of the group. It should be listed among the groups, next to them
-  // add icons
   // cn
   // tooltip
 

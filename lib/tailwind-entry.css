@@ -11,7 +11,7 @@
 }
 
 .lp-pad {
-  @apply bg-gray-100 min-h-40;
+  @apply bg-gray-100 min-h-64;
 }
 
 .lp-toolbar {
@@ -19,7 +19,7 @@
 }
 
 .lp-command-groups {
-  @apply bg-white flex space-x-1;
+  @apply bg-white flex space-x-1 divide-x divide-gray-300;
 }
 
 .lp-command-group {
@@ -28,4 +28,16 @@
 
 .lp-command {
   @apply w-7 h-7 overflow-hidden cursor-pointer rounded flex justify-center items-center hover:bg-gray-100 transition-colors;
+}
+
+.lp-dropdown-list {
+  @apply bg-white rounded w-full absolute bottom-8 mb-0.5 z-10 shadow;
+}
+
+.lp-dropdown-list-item {
+  @apply flex items-center space-x-3 cursor-pointer px-2 py-1 hover:bg-gray-100 min-w-36;
+}
+
+.lp-dropdown-list-item-selected {
+  @apply bg-gray-100;
 }

@@ -40,6 +40,7 @@ export type ToolbarGroup = {
   name: string;
   position: number;
   hidden: boolean;
+  dropdown: boolean;
   align: 'left' | 'right';
 } & (
   | HistoryGroup

@@ -8,6 +8,7 @@ export const defaultToolbar: ToolbarConfig = {
       name: 'history',
       position: 1,
       hidden: false,
+      dropdown: true,
       align: 'left',
       commands: [
         {
@@ -28,6 +29,7 @@ export const defaultToolbar: ToolbarConfig = {
       name: 'inline',
       position: 2,
       hidden: false,
+      dropdown: false,
       align: 'left',
       commands: [
         {
@@ -60,6 +62,7 @@ export const defaultToolbar: ToolbarConfig = {
       name: 'alignment',
       position: 3,
       hidden: false,
+      dropdown: true,
       align: 'left',
       commands: [
         { name: 'left', position: 1, hidden: false, icon: 'align-left' },
@@ -76,28 +79,30 @@ export const defaultToolbar: ToolbarConfig = {
       name: 'block',
       position: 4,
       hidden: false,
+      dropdown: true,
       align: 'left',
       commands: [
         {
-          name: 'Normal',
+          name: 'normal',
           position: 1,
           hidden: false,
           icon: 'clear-formatting',
         },
-        { name: 'Heading 1', position: 2, hidden: false, icon: 'heading-h1' },
-        { name: 'Heading 2', position: 3, hidden: false, icon: 'heading-h2' },
-        { name: 'Heading 3', position: 4, hidden: false, icon: 'heading-h3' },
-        { name: 'Heading 4', position: 5, hidden: false, icon: 'heading-h4' },
-        { name: 'Heading 5', position: 6, hidden: false, icon: 'heading-h5' },
-        { name: 'Heading 6', position: 7, hidden: false, icon: 'heading-h6' },
-        { name: 'Blockquote', position: 8, hidden: false, icon: 'quote-right' },
-        { name: 'Code', position: 8, hidden: false, icon: 'code' },
+        { name: 'heading 1', position: 2, hidden: false, icon: 'heading-h1' },
+        { name: 'heading 2', position: 3, hidden: false, icon: 'heading-h2' },
+        { name: 'heading 3', position: 4, hidden: false, icon: 'heading-h3' },
+        { name: 'heading 4', position: 5, hidden: false, icon: 'heading-h4' },
+        { name: 'heading 5', position: 6, hidden: false, icon: 'heading-h5' },
+        { name: 'heading 6', position: 7, hidden: false, icon: 'heading-h6' },
+        { name: 'blockquote', position: 8, hidden: false, icon: 'quote-right' },
+        { name: 'code', position: 8, hidden: false, icon: 'code' },
       ],
     },
     {
       name: 'list',
       position: 5,
       hidden: false,
+      dropdown: false,
       align: 'left',
       commands: [
         { name: 'ordered', position: 1, hidden: false, icon: 'list-number' },
@@ -115,6 +120,7 @@ export const defaultToolbar: ToolbarConfig = {
       name: 'link',
       position: 6,
       hidden: false,
+      dropdown: false,
       align: 'left',
       commands: [
         { name: 'link', position: 1, hidden: false, icon: 'link' },
