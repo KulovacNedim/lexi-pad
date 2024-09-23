@@ -15,7 +15,7 @@
 }
 
 .lp-toolbar {
-  @apply h-8 flex justify-between w-full;
+  @apply h-8 bg-white flex justify-between w-full;
 }
 
 .lp-command-groups {

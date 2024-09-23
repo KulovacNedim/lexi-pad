@@ -23,9 +23,10 @@ export const Dropdown = ({
   closeDropdown,
 }: DropdownProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const commands = group.commands.filter((command) => !command.hidden);
 
   const [selectedCommand, setSelectedCommand] = useState<OneofToolbarCommand>(
-    group.commands[0]
+    commands[0]
   );
 
   useEffect(() => {
@@ -71,7 +72,7 @@ export const Dropdown = ({
 
       {isOpen && (
         <div className='lp-dropdown-list'>
-          {group.commands.map((command) => (
+          {commands.map((command) => (
             <div
               key={command.name}
               className={classNames('lp-dropdown-list-item', {

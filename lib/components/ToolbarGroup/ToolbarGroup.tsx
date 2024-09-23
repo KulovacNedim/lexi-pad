@@ -35,9 +35,11 @@ export const ToolbarGroup = ({ group }: ToolbarGroupProps) => {
 
   return (
     <div key={group.name} className='lp-command-group'>
-      {group.commands.map((command) => (
-        <ToolbarCommand command={command} key={command.name} />
-      ))}
+      {group.commands
+        .filter((command) => !command.hidden)
+        .map((command) => (
+          <ToolbarCommand command={command} key={command.name} />
+        ))}
     </div>
   );
 };
