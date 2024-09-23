@@ -1,5 +1,5 @@
 import type { SVGProps } from 'react';
-const SvgQuoteRightSvgrepoCom = (props: SVGProps<SVGSVGElement>) => (
+const SvgQuoteRight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='1em'
@@ -16,4 +16,4 @@ const SvgQuoteRightSvgrepoCom = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
-export default SvgQuoteRightSvgrepoCom;
+export default SvgQuoteRight;

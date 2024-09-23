@@ -41,3 +41,15 @@
 .lp-dropdown-list-item-selected {
   @apply bg-gray-100;
 }
+
+.lp-chevron {
+  @apply transition-transform duration-200 ease-in-out;
+}
+
+.lp-rotate-180 {
+  @apply -rotate-180;
+}
+
+.lp-rotate-0 {
+  @apply rotate-0;
+}

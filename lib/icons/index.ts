@@ -1,6 +1,5 @@
 export * from './SvgBold.tsx';
 export * from './SvgCode.tsx';
-export * from './HeadingSvgrepoCom';
 export * from './SvgIndentLeft.tsx';
 export * from './SvgIndentRight.tsx';
 export * from './SvgItalic.tsx';
@@ -23,3 +22,4 @@ export * from './SvgHeadingH5.tsx';
 export * from './SvgHeadingH6.tsx';
 export * from './SvgClearFormatting.tsx';
 export * from './SvgQuoteRight.tsx';
+export * from './ChevronDown.tsx';

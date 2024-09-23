@@ -3,6 +3,7 @@ import { ToolbarGroup } from '../../types/toolbar-groups';
 import { OneofToolbarCommand } from '../../types/toolbar-commands';
 import { Icon } from '../Icon';
 import classNames from 'classnames';
+import SvgChevronDown from '../../icons/ChevronDown';
 
 function capitalizeName(name: string) {
   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -55,7 +56,17 @@ export const Dropdown = ({
         onClick={() => toggleDropdown(group.name)}
       >
         <Icon command={selectedCommand} />
-        <span>{capitalizeName(selectedCommand.name)}</span>
+        <span className='flex-1 text-left'>
+          {capitalizeName(selectedCommand.name)}
+        </span>
+        <div
+          className={classNames('lp-chevron', {
+            'lp-rotate-180': isOpen,
+            'lp-rotate-0': !isOpen,
+          })}
+        >
+          <SvgChevronDown />
+        </div>
       </button>
 
       {isOpen && (

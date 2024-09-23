@@ -1,5 +1,5 @@
 import type { SVGProps } from 'react';
-const SvgHeadingH1SvgrepoCom = (props: SVGProps<SVGSVGElement>) => (
+const SvgHeadingH1 = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='1em'
@@ -16,4 +16,4 @@ const SvgHeadingH1SvgrepoCom = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default SvgHeadingH1SvgrepoCom;
+export default SvgHeadingH1;

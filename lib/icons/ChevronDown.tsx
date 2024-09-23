@@ -1,5 +1,5 @@
 import type { SVGProps } from 'react';
-const SvgHeadingH6 = (props: SVGProps<SVGSVGElement>) => (
+const SvgChevronDown = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='1em'
@@ -8,12 +8,13 @@ const SvgHeadingH6 = (props: SVGProps<SVGSVGElement>) => (
     viewBox='0 0 24 24'
     {...props}
   >
+    <path d='M0 0h24v24H0z' />
     <path
       stroke='#000'
       strokeLinecap='round'
       strokeLinejoin='round'
-      d='M15.402 14.525A2.974 2.974 0 0 0 16.5 18.6a3.01 3.01 0 0 0 4.099-1.092 2.973 2.973 0 0 0-1.099-4.075 3.01 3.01 0 0 0-4.098 1.092m0 0L19 8M3 5v7m0 0v7m0-7h8m0-7v7m0 0v7'
+      d='m17 9.5-5 5-5-5'
     />
   </svg>
 );
-export default SvgHeadingH6;
+export default SvgChevronDown;
