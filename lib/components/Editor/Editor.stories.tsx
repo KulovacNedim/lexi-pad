@@ -52,12 +52,35 @@ export const Main: Story = {
 
 export const ToolbarOnTop: Story = {
   args: {
-    toolbar: { position: 'top' },
+    toolbar: { position: 'top', mode: 'minimal' },
   },
 };
 
 export const HiddenToolbar: Story = {
   args: {
     toolbar: { visible: false },
+  },
+};
+
+// TO-DO: test overriding predefined options
+export const DefaultToolbar = {
+  args: {
+    toolbar: {},
+  },
+};
+
+export const MinimalToolbar = {
+  args: {
+    toolbar: {
+      mode: 'minimal',
+    },
+  },
+};
+
+export const OptimalToolbar = {
+  args: {
+    toolbar: {
+      mode: 'optimal',
+    },
   },
 };

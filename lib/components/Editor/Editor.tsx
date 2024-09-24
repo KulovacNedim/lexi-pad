@@ -12,7 +12,7 @@ type EditorProps = RecursivePartial<EditorConfig>;
 export const Editor = ({ className = '', toolbar }: EditorProps) => {
   const mergedToolbar = useMemo(() => {
     if (toolbar?.visible === false) {
-      return defaultToolbar;
+      return { ...defaultToolbar, visible: false };
     }
     return mergeToolbar(toolbar);
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -11,7 +11,7 @@ export const defaultToolbar: ToolbarConfig = {
       name: 'history',
       position: 1,
       hidden: false,
-      dropdown: true,
+      dropdown: false,
       align: 'left',
       commands: [
         {

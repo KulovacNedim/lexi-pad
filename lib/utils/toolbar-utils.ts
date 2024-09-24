@@ -1,4 +1,5 @@
 import { defaultToolbar } from '../config/default-toolbar';
+import { getPredefinedToolbar } from '../config/predefined-toolbars';
 import { RecursivePartial } from '../types/recursive-partial';
 import { ToolbarConfig } from '../types/toolbar';
 import {
@@ -120,19 +121,29 @@ const deepMerge = <T>(defaultObj: T, userObj?: RecursivePartial<T>): T => {
 export const mergeToolbar = (
   toolbar?: RecursivePartial<ToolbarConfig>
 ): ToolbarConfig => {
-  // Validate the user's toolbar groups before merging
-  // const validatedGroups =  validateToolbarGroups(toolbar?.groups?.filter(Boolean) as RecursivePartial<ToolbarGroup>[])
+  // Get predefined toolbar
+  const toolbarMode = toolbar?.mode ?? 'all';
+  const predefinedConfig = getPredefinedToolbar(toolbarMode);
+
+  if (!toolbar) {
+    return deepMerge(defaultToolbar, predefinedConfig);
+  }
+
+  // Validate users definition
   const validatedGroups = validateToolbarGroups(
     toolbar?.groups?.filter((group): group is RecursivePartial<ToolbarGroup> =>
       Boolean(group)
     )
   );
 
-  // Merge validated groups with the default toolbar
-  const mergedToolbar = deepMerge(defaultToolbar, {
+  // Merge predefined toolbar with the users definition
+  const usersConfig = deepMerge(predefinedConfig, {
     ...toolbar,
     groups: validatedGroups,
   });
+
+  // Merge default toolbar with predefined toolbar
+  const mergedToolbar = deepMerge(defaultToolbar, usersConfig);
 
   return mergedToolbar;
 };
