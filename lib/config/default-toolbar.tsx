@@ -4,6 +4,7 @@ import { ToolbarConfig } from '../types/toolbar';
 export const defaultToolbar: ToolbarConfig = {
   position: 'bottom',
   visible: true,
+  tooltip: true,
   groups: [
     {
       type: 'rich-text',

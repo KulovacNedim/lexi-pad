@@ -53,3 +53,23 @@
 .lp-rotate-0 {
   @apply rotate-0;
 }
+
+.lp-tooltip {
+  @apply absolute z-10 px-2 py-1 text-xs text-slate-100 opacity-90 bg-slate-500 rounded-[2px];
+}
+
+.lp-tooltip-top {
+  @apply bottom-full left-1/2 transform -translate-x-1/2 mb-0.5;
+}
+
+.lp-tooltip-bottom {
+  @apply top-full left-1/2 transform -translate-x-1/2 mt-0.5;
+}
+
+.lp-tooltip-left {
+  @apply right-full mr-0.5;
+}
+
+.lp-tooltip-right {
+  @apply left-full mr-0.5;
+}

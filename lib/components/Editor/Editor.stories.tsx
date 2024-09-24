@@ -20,6 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const Main: Story = {
   args: {
     toolbar: {
+      // tooltip: false,
       position: 'bottom',
       groups: [
         {

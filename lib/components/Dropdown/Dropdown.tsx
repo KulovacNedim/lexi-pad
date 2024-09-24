@@ -4,6 +4,8 @@ import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
 import { Icon } from '../Icon';
 import classNames from 'classnames';
 import SvgChevronDown from '../../icons/ChevronDown';
+import { Tooltip } from '../Tooltip';
+import { convertToCamelCase } from '../../utils/toolbar-utils';
 
 function capitalizeName(name: string) {
   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -12,6 +14,7 @@ function capitalizeName(name: string) {
 type DropdownProps = {
   group: PredefinedToolbarGroup;
   isOpen: boolean;
+  tooltip: boolean;
   toggleDropdown: (groupName: string) => void;
   closeDropdown: () => void;
 };
@@ -19,6 +22,7 @@ type DropdownProps = {
 export const Dropdown = ({
   group,
   isOpen,
+  tooltip,
   toggleDropdown,
   closeDropdown,
 }: DropdownProps) => {
@@ -49,25 +53,32 @@ export const Dropdown = ({
     toggleDropdown(command.name);
   };
 
+  const base = (
+    <button
+      className='lp-dropdown-list-item'
+      onClick={() => toggleDropdown(group.name)}
+    >
+      <Icon command={selectedCommand} />
+      <span className='flex-1 text-left'>
+        {capitalizeName(selectedCommand.name)}
+      </span>
+      <div
+        className={classNames('lp-chevron', {
+          'lp-rotate-180': isOpen,
+          'lp-rotate-0': !isOpen,
+        })}
+      >
+        <SvgChevronDown />
+      </div>
+    </button>
+  );
+
   return (
     <div className='relative' ref={dropdownRef}>
-      <button
-        className='lp-dropdown-list-item'
-        onClick={() => toggleDropdown(group.name)}
-      >
-        <Icon command={selectedCommand} />
-        <span className='flex-1 text-left'>
-          {capitalizeName(selectedCommand.name)}
-        </span>
-        <div
-          className={classNames('lp-chevron', {
-            'lp-rotate-180': isOpen,
-            'lp-rotate-0': !isOpen,
-          })}
-        >
-          <SvgChevronDown />
-        </div>
-      </button>
+      {tooltip && (
+        <Tooltip content={convertToCamelCase(group.name)}>{base}</Tooltip>
+      )}
+      {!tooltip && base}
 
       {isOpen && (
         <div className='lp-dropdown-list'>

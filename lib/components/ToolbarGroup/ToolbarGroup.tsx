@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { ToolbarGroup as ToolbarGroupType } from '../../types/toolbar-groups';
 import { ToolbarCommand } from '../ToolbarCommand';
 import { Dropdown } from '../Dropdown';
+import { ToolbarConfig } from '../../types/toolbar';
 
 type ToolbarGroupProps = {
   group: ToolbarGroupType;
+  config: ToolbarConfig;
 };
 
-export const ToolbarGroup = ({ group }: ToolbarGroupProps) => {
+export const ToolbarGroup = ({ group, config }: ToolbarGroupProps) => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<string | null>(
     null
   );
@@ -35,6 +37,7 @@ export const ToolbarGroup = ({ group }: ToolbarGroupProps) => {
         isOpen={openDropdownIndex === group.name}
         toggleDropdown={toggleDropdown}
         closeDropdown={closeDropdown}
+        tooltip={config.tooltip}
       />
     );
   }
@@ -45,7 +48,11 @@ export const ToolbarGroup = ({ group }: ToolbarGroupProps) => {
       {group.commands
         .filter((command) => !command.hidden)
         .map((command) => (
-          <ToolbarCommand command={command} key={command.name} />
+          <ToolbarCommand
+            command={command}
+            key={command.name}
+            tooltip={config.tooltip}
+          />
         ))}
     </div>
   );

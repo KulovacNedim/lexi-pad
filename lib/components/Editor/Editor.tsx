@@ -25,7 +25,7 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
   return (
     <div className={classNames('lp-wrapper', toolbarOnTop, className)}>
       <Pad />
-      {mergedToolbar.visible && <Toolbar groups={mergedToolbar.groups} />}
+      {mergedToolbar.visible && <Toolbar config={mergedToolbar} />}
     </div>
   );
 };
