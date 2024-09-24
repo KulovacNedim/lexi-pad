@@ -3,10 +3,6 @@ type ToolbarCommand = {
   icon: string;
   hidden: boolean;
 };
-//   | AlignmentCommand
-//   | BlockCommand
-//   | ListCommand
-//   | LinkCommand
 
 export type HistoryCommand = {
   name: 'undo' | 'redo';
