@@ -134,6 +134,8 @@ export const mergeToolbar = (
     groups: validatedGroups,
   });
 
+  console.log(99);
+
   return mergedToolbar;
 };
 
