@@ -1,3 +1,4 @@
+import { EmojiPicker } from '../components/EmojiPicker';
 import { ToolbarConfig } from '../types/toolbar';
 
 export const defaultToolbar: ToolbarConfig = {
@@ -5,6 +6,7 @@ export const defaultToolbar: ToolbarConfig = {
   visible: true,
   groups: [
     {
+      type: 'rich-text',
       name: 'history',
       position: 1,
       hidden: false,
@@ -26,6 +28,7 @@ export const defaultToolbar: ToolbarConfig = {
       ],
     },
     {
+      type: 'rich-text',
       name: 'inline',
       position: 2,
       hidden: false,
@@ -59,6 +62,7 @@ export const defaultToolbar: ToolbarConfig = {
       ],
     },
     {
+      type: 'rich-text',
       name: 'alignment',
       position: 3,
       hidden: false,
@@ -76,6 +80,7 @@ export const defaultToolbar: ToolbarConfig = {
       ],
     },
     {
+      type: 'rich-text',
       name: 'block',
       position: 4,
       hidden: false,
@@ -99,6 +104,7 @@ export const defaultToolbar: ToolbarConfig = {
       ],
     },
     {
+      type: 'rich-text',
       name: 'list',
       position: 5,
       hidden: false,
@@ -117,6 +123,7 @@ export const defaultToolbar: ToolbarConfig = {
       ],
     },
     {
+      type: 'rich-text',
       name: 'link',
       position: 6,
       hidden: false,
@@ -126,6 +133,15 @@ export const defaultToolbar: ToolbarConfig = {
         { name: 'link', position: 1, hidden: false, icon: 'link' },
         { name: 'unlink', position: 2, hidden: false, icon: 'unlink' },
       ],
+    },
+    {
+      type: 'custom-component',
+      name: 'emoji-picker',
+      position: 1,
+      hidden: false,
+      align: 'right',
+      dropdown: false,
+      renderComponent: <EmojiPicker />,
     },
   ],
 };

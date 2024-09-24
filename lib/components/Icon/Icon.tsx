@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { OneofToolbarCommand } from '../../types/toolbar-commands';
+import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
 import { convertToCamelCase } from '../../utils/toolbar-utils';
 
 interface IconProps {
-  command: OneofToolbarCommand;
+  command: PredefinedToolbarCommands;
 }
 
 export const Icon = ({ command }: IconProps) => {

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { ToolbarGroup } from '../../types/toolbar-groups';
-import { OneofToolbarCommand } from '../../types/toolbar-commands';
+import { PredefinedToolbarGroup } from '../../types/toolbar-groups';
+import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
 import { Icon } from '../Icon';
 import classNames from 'classnames';
 import SvgChevronDown from '../../icons/ChevronDown';
@@ -10,7 +10,7 @@ function capitalizeName(name: string) {
 }
 
 type DropdownProps = {
-  group: ToolbarGroup;
+  group: PredefinedToolbarGroup;
   isOpen: boolean;
   toggleDropdown: (groupName: string) => void;
   closeDropdown: () => void;
@@ -25,9 +25,8 @@ export const Dropdown = ({
   const dropdownRef = useRef<HTMLDivElement>(null);
   const commands = group.commands.filter((command) => !command.hidden);
 
-  const [selectedCommand, setSelectedCommand] = useState<OneofToolbarCommand>(
-    commands[0]
-  );
+  const [selectedCommand, setSelectedCommand] =
+    useState<PredefinedToolbarCommands>(commands[0]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -45,7 +44,7 @@ export const Dropdown = ({
     };
   }, [closeDropdown]);
 
-  const onSelectHandler = (command: OneofToolbarCommand) => {
+  const onSelectHandler = (command: PredefinedToolbarCommands) => {
     setSelectedCommand(command);
     toggleDropdown(command.name);
   };

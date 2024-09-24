@@ -22,6 +22,12 @@ export const ToolbarGroup = ({ group }: ToolbarGroupProps) => {
 
   const closeDropdown = () => setOpenDropdownIndex(null);
 
+  // custom component
+  if ('renderComponent' in group) {
+    return group.renderComponent;
+  }
+
+  // dropdown
   if (group.dropdown) {
     return (
       <Dropdown
@@ -33,6 +39,7 @@ export const ToolbarGroup = ({ group }: ToolbarGroupProps) => {
     );
   }
 
+  // list of commands
   return (
     <div key={group.name} className='lp-command-group'>
       {group.commands

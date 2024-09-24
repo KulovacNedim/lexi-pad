@@ -1,5 +1,7 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Editor } from './editor';
+import { EmojiPicker } from '../EmojiPicker';
 
 const meta = {
   title: 'Components/Editor',
@@ -28,10 +30,15 @@ export const Main: Story = {
           hidden: false,
           commands: [{ name: 'bold' }],
         },
-        { name: 'alignment', position: 1 },
-        // { name: 'test 3', position: 3, align: 'right' },
-        // { name: 'test 4', position: 4, align: 'left' },
-        // { name: 'test 5', position: 5 },
+        { type: 'rich-text', name: 'alignment', position: 5 },
+        {
+          name: 'emoji-picker',
+          position: 0,
+          hidden: false,
+          align: 'right',
+          dropdown: false,
+          renderComponent: <EmojiPicker />,
+        },
       ],
     },
   },

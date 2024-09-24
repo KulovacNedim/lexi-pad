@@ -10,6 +10,7 @@ type EditorProps = RecursivePartial<EditorConfig>;
 export const Editor = ({ className = '', toolbar }: EditorProps) => {
   // TO-DO: only if the toolbar is visible
   // TO-DO: memoize
+  // TO-DO: add check for custom compoennts - make sure they have the complete definition
   const mergedToolbar = mergeToolbar(toolbar);
 
   const toolbarOnTop = {

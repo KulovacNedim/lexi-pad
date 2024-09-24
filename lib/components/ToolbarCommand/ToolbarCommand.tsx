@@ -1,8 +1,8 @@
-import { OneofToolbarCommand } from '../../types/toolbar-commands';
+import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
 import { Icon } from '../Icon';
 
 interface ToolbarCommandProps {
-  command: OneofToolbarCommand;
+  command: PredefinedToolbarCommands;
 }
 
 export const ToolbarCommand = ({ command }: ToolbarCommandProps) => {
