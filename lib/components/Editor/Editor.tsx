@@ -4,13 +4,12 @@ import { Toolbar } from '../Toolbar';
 import { EditorConfig } from '../../types/editor';
 import { mergeToolbar } from '../../utils/toolbar-utils';
 import { RecursivePartial } from '../../types/recursive-partial';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { defaultToolbar } from '../../config/default-toolbar';
 
 type EditorProps = RecursivePartial<EditorConfig>;
 
 export const Editor = ({ className = '', toolbar }: EditorProps) => {
-  const [counter, setCounter] = useState(0);
   const mergedToolbar = useMemo(() => {
     if (toolbar?.visible === false) {
       return defaultToolbar;
@@ -25,8 +24,6 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
 
   return (
     <div className={classNames('lp-wrapper', toolbarOnTop, className)}>
-      <button onClick={() => setCounter((v) => v + 1)}>+</button>
-      {counter}
       <Pad />
       {mergedToolbar.visible && <Toolbar groups={mergedToolbar.groups} />}
     </div>
