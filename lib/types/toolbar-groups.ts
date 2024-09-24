@@ -63,7 +63,7 @@ export type CustomComponentGroup = {
   renderComponent: JSX.Element;
 };
 
-type WithBaseGroup<T> = T & {
+export type WithBaseGroup<T> = T & {
   name: string;
   position: number;
   hidden: boolean;

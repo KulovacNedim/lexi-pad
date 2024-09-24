@@ -22,7 +22,12 @@ export const Main: Story = {
     toolbar: {
       position: 'bottom',
       groups: [
-        { name: 'history', position: 6, align: 'right' },
+        {
+          name: 'history',
+          position: 6,
+          align: 'right',
+          // commands: [{ name: 'redo', hidden: true }],
+        },
         {
           name: 'inline',
           position: 2,

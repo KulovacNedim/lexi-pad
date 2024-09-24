@@ -1,7 +1,7 @@
 type ToolbarCommand = {
-  hidden: boolean;
   position: number;
   icon: string;
+  hidden: boolean;
 };
 //   | AlignmentCommand
 //   | BlockCommand
@@ -55,7 +55,7 @@ export type LinkCommand = {
   name: 'link' | 'unlink';
 } & ToolbarCommand;
 
-export type OneofToolbarCommand =
+export type PredefinedToolbarCommands =
   | HistoryCommand
   | InlineCommand
   | AlignmentCommand
