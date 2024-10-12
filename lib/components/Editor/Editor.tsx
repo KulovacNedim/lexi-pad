@@ -15,7 +15,6 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
       return { ...defaultToolbar, visible: false };
     }
     return mergeToolbar(toolbar);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toolbarOnTop = {
