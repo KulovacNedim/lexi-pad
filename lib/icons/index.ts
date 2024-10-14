@@ -22,4 +22,4 @@ export * from './SvgHeadingH5.tsx';
 export * from './SvgHeadingH6.tsx';
 export * from './SvgClearFormatting.tsx';
 export * from './SvgQuoteRight.tsx';
-export * from './ChevronDown.tsx';
+export * from './SvgChevronDown.tsx';

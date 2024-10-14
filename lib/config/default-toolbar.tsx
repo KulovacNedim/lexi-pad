@@ -76,8 +76,8 @@ export const defaultToolbar: ToolbarConfig = {
         { name: 'justify', position: 4, hidden: false, icon: 'align-justify' },
         { name: 'start', position: 5, hidden: false, icon: 'align-left' },
         { name: 'end', position: 6, hidden: false, icon: 'align-right' },
-        { name: 'outdent', position: 7, hidden: false, icon: 'indent-left' },
-        { name: 'indent', position: 8, hidden: false, icon: 'indent-right' },
+        { name: 'indent', position: 7, hidden: false, icon: 'indent-right' },
+        { name: 'outdent', position: 8, hidden: false, icon: 'indent-left' },
       ],
     },
     {
@@ -119,8 +119,8 @@ export const defaultToolbar: ToolbarConfig = {
           hidden: false,
           icon: 'list-bullet',
         },
-        { name: 'outdent', position: 3, hidden: false, icon: 'indent-left' },
-        { name: 'indent', position: 4, hidden: false, icon: 'indent-right' },
+        { name: 'indent', position: 3, hidden: false, icon: 'indent-right' },
+        { name: 'outdent', position: 4, hidden: false, icon: 'indent-left' },
       ],
     },
     {

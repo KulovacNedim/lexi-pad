@@ -3,10 +3,13 @@ import { PredefinedToolbarGroup } from '../../types/toolbar-groups';
 import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
 import { Icon } from '../Icon';
 import classNames from 'classnames';
-import SvgChevronDown from '../../icons/ChevronDown';
+import SvgChevronDown from '../../icons/SvgChevronDown';
 import { Tooltip } from '../Tooltip';
 import { convertToCamelCase } from '../../utils';
 import { ToolbarConfig } from '../../types/toolbar';
+import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext';
+import { commandHandlers } from '../../utils/commandHandlers';
+import { CommandHandlers } from '../../types/commandTypes';
 
 function capitalizeName(name: string) {
   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -29,6 +32,8 @@ export const Dropdown = ({
   closeDropdown,
   toolbarPosition,
 }: DropdownProps) => {
+  const [editor] = useLexicalComposerContext();
+
   const dropdownRef = useRef<HTMLDivElement>(null);
   const commands = group.commands.filter((command) => !command.hidden);
 
@@ -54,6 +59,10 @@ export const Dropdown = ({
   const onSelectHandler = (command: PredefinedToolbarCommands) => {
     setSelectedCommand(command);
     toggleDropdown(command.name);
+    const handler = commandHandlers[command.name as keyof CommandHandlers];
+    if (handler) {
+      editor.dispatchCommand(handler.command, handler.options);
+    }
   };
 
   const base = (
