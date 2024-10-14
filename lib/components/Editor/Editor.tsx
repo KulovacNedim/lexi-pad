@@ -8,6 +8,7 @@ import { useMemo } from 'react';
 import { defaultToolbar } from '../../config/default-toolbar';
 import { LexicalComposer } from '@lexical/react/LexicalComposer';
 import { editorConfig } from '../../config/editorConfig';
+import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
 
 type EditorProps = RecursivePartial<EditorConfig>;
 
@@ -29,6 +30,7 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
         <Pad />
         {mergedToolbar.visible && <Toolbar config={mergedToolbar} />}
       </div>
+      <HistoryPlugin />
     </LexicalComposer>
   );
 };
