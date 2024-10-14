@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Editor } from './editor';
-import { EmojiPicker } from '../EmojiPicker';
+import { Editor } from '../../components/Editor';
+import { EmojiPicker } from '../../components/EmojiPicker';
 
 const meta = {
-  title: 'Components/Editor',
+  title: 'Components/Main',
   component: Editor,
   parameters: {
     layout: 'padded',
@@ -44,24 +44,6 @@ export const Main: Story = {
           renderComponent: <EmojiPicker />,
         },
       ],
-    },
-  },
-};
-
-export const ToolbarOnTop: Story = {
-  args: {
-    toolbar: {
-      position: 'top',
-      groups: [{ type: 'rich-text', name: 'block', hidden: true }],
-    },
-  },
-};
-
-export const HiddenToolbar: Story = {
-  args: {
-    toolbar: {
-      visible: false,
-      groups: [{ type: 'rich-text', name: 'block', hidden: true }],
     },
   },
 };
