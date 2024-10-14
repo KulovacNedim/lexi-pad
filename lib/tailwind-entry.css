@@ -31,7 +31,15 @@
 }
 
 .lp-dropdown-list {
-  @apply bg-white rounded w-full absolute bottom-8 mb-0.5 z-10 shadow;
+  @apply bg-white rounded w-full absolute z-10 shadow;
+}
+
+.lp-dropdown-above {
+  @apply bottom-8 mb-0.5;
+}
+
+.lp-dropdown-below {
+  @apply top-8 mt-0.5;
 }
 
 .lp-dropdown-list-item {

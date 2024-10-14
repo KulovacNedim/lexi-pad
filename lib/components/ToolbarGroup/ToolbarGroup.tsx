@@ -38,13 +38,14 @@ export const ToolbarGroup = ({ group, config }: ToolbarGroupProps) => {
         toggleDropdown={toggleDropdown}
         closeDropdown={closeDropdown}
         tooltip={config.tooltip}
+        toolbarPosition={config.position}
       />
     );
   }
 
   // list of commands
   return (
-    <div key={group.name} className='lp-command-group'>
+    <div key={group.name} className="lp-command-group">
       {group.commands
         .filter((command) => !command.hidden)
         .map((command) => (
