@@ -1,5 +1,5 @@
 import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
-import { convertToCamelCase } from '../../utils/toolbar-utils';
+import { convertToCamelCase } from '../../utils';
 import { Icon } from '../Icon';
 import { Tooltip } from '../Tooltip';
 
@@ -10,7 +10,7 @@ interface ToolbarCommandProps {
 
 export const ToolbarCommand = ({ command, tooltip }: ToolbarCommandProps) => {
   const commandElement = (
-    <div className='lp-command'>
+    <div className="lp-command">
       <Icon command={command} />
     </div>
   );

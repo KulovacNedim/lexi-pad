@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PredefinedToolbarCommands } from '../../types/toolbar-commands';
-import { convertToCamelCase } from '../../utils/toolbar-utils';
+import { convertToCamelCase } from '../../utils';
 
 interface IconProps {
   command: PredefinedToolbarCommands;

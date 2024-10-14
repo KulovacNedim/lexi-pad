@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 import classNames from 'classnames';
 import SvgChevronDown from '../../icons/ChevronDown';
 import { Tooltip } from '../Tooltip';
-import { convertToCamelCase } from '../../utils/toolbar-utils';
+import { convertToCamelCase } from '../../utils';
 
 function capitalizeName(name: string) {
   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -55,11 +55,11 @@ export const Dropdown = ({
 
   const base = (
     <button
-      className='lp-dropdown-list-item'
+      className="lp-dropdown-list-item"
       onClick={() => toggleDropdown(group.name)}
     >
       <Icon command={selectedCommand} />
-      <span className='flex-1 text-left'>
+      <span className="flex-1 text-left">
         {capitalizeName(selectedCommand.name)}
       </span>
       <div
@@ -74,14 +74,14 @@ export const Dropdown = ({
   );
 
   return (
-    <div className='relative' ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef}>
       {tooltip && (
         <Tooltip content={convertToCamelCase(group.name)}>{base}</Tooltip>
       )}
       {!tooltip && base}
 
       {isOpen && (
-        <div className='lp-dropdown-list'>
+        <div className="lp-dropdown-list">
           {commands.map((command) => (
             <div
               key={command.name}

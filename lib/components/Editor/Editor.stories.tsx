@@ -59,6 +59,9 @@ export const ToolbarOnTop: Story = {
 
 export const HiddenToolbar: Story = {
   args: {
-    toolbar: { visible: false },
+    toolbar: {
+      visible: false,
+      groups: [{ type: 'rich-text', name: 'block', hidden: true }],
+    },
   },
 };

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { Pad } from '../Pad';
 import { Toolbar } from '../Toolbar';
 import { EditorConfig } from '../../types/editor';
-import { mergeToolbar } from '../../utils/toolbar-utils';
+import { mergeToolbar } from '../../utils';
 import { RecursivePartial } from '../../types/recursive-partial';
 import { useMemo } from 'react';
 import { defaultToolbar } from '../../config/default-toolbar';
@@ -15,7 +15,7 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
       return { ...defaultToolbar, visible: false };
     }
     return mergeToolbar(toolbar);
-  }, []);
+  }, [toolbar]);
 
   const toolbarOnTop = {
     'lp-col-reverse': mergedToolbar.position === 'top',
