@@ -713,11 +713,20 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.lp-editor-input {
+  min-height: 16rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .lp-toolbar {
   display: flex;
   height: 2rem;
   width: 100%;
   justify-content: space-between;
+  border-top-width: 1px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
@@ -881,6 +890,18 @@ video {
 .lp-tooltip-right {
   left: 100%;
   margin-right: 0.125rem;
+}
+
+.lp-editor-text-underline {
+  text-decoration-line: underline;
+}
+
+.lp-editor-text-strikethrough {
+  text-decoration-line: line-through;
+}
+
+.lp-editor-text-underline-strikethrough {
+  text-decoration-line: underline line-through;
 }
 
 .hover\:bg-gray-200:hover {

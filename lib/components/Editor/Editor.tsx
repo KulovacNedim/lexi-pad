@@ -6,6 +6,8 @@ import { mergeToolbar } from '../../utils';
 import { RecursivePartial } from '../../types/recursive-partial';
 import { useMemo } from 'react';
 import { defaultToolbar } from '../../config/default-toolbar';
+import { LexicalComposer } from '@lexical/react/LexicalComposer';
+import { editorConfig } from '../../config/editorConfig';
 
 type EditorProps = RecursivePartial<EditorConfig>;
 
@@ -22,9 +24,11 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
   };
 
   return (
-    <div className={classNames('lp-wrapper', toolbarOnTop, className)}>
-      <Pad />
-      {mergedToolbar.visible && <Toolbar config={mergedToolbar} />}
-    </div>
+    <LexicalComposer initialConfig={editorConfig}>
+      <div className={classNames('lp-wrapper', toolbarOnTop, className)}>
+        <Pad />
+        {mergedToolbar.visible && <Toolbar config={mergedToolbar} />}
+      </div>
+    </LexicalComposer>
   );
 };

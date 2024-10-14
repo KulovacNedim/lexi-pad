@@ -1,0 +1,35 @@
+export default {
+    code: 'editor-code',
+    heading: {
+      h1: 'editor-heading-h1',
+      h2: 'editor-heading-h2',
+      h3: 'editor-heading-h3',
+      h4: 'editor-heading-h4',
+      h5: 'editor-heading-h5',
+    },
+    image: 'editor-image',
+    link: 'editor-link',
+    list: {
+      listitem: 'editor-listitem',
+      nested: {
+        listitem: 'editor-nested-listitem',
+      },
+      ol: 'editor-list-ol',
+      ul: 'editor-list-ul',
+    },
+    ltr: 'ltr',
+    paragraph: 'editor-paragraph',
+    placeholder: 'editor-placeholder',
+    quote: 'editor-quote',
+    rtl: 'rtl',
+    text: {
+      bold: 'lp-editor-text-bold',
+      code: 'lp-editor-text-code',
+      hashtag: 'lp-editor-text-hashtag',
+      italic: 'lp-editor-text-italic',
+      overflowed: 'lp-editor-text-overflowed',
+      strikethrough: 'lp-editor-text-strikethrough',
+      underline: 'lp-editor-text-underline',
+      underlineStrikethrough: 'lp-editor-text-underline-strikethrough',
+    },
+  };

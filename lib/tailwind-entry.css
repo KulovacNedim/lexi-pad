@@ -14,8 +14,12 @@
   @apply bg-gray-100 min-h-64;
 }
 
+.lp-editor-input {
+  @apply min-h-64 rounded p-1 outline-none;
+}
+
 .lp-toolbar {
-  @apply h-8 bg-white flex justify-between w-full;
+  @apply h-8 bg-white border-t flex justify-between w-full;
 }
 
 .lp-command-groups {
@@ -80,4 +84,15 @@
 
 .lp-tooltip-right {
   @apply left-full mr-0.5;
+}
+
+.lp-editor-text-underline {
+  @apply underline;
+}
+.lp-editor-text-strikethrough {
+  @apply line-through;
+}
+
+.lp-editor-text-underline-strikethrough {
+  text-decoration-line: underline line-through;
 }

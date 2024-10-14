@@ -34,6 +34,7 @@
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
+    "lexical": "^0.18.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -73,5 +74,8 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "dependencies": {
+    "@lexical/react": "^0.18.0"
   }
 }
