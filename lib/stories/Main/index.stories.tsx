@@ -28,6 +28,10 @@ export const Main: Story = {
           // commands: [{ name: 'redo', hidden: true }],
         },
         {
+          name: 'block',
+          dropdown: false,
+        },
+        {
           name: 'inline',
           position: 2,
           align: 'right',

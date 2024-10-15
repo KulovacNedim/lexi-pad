@@ -9,7 +9,7 @@ export type HistoryCommand = {
 } & ToolbarCommand;
 
 export type InlineCommand = {
-  name: 'bold' | 'italic' | 'underline' | 'strikethrough';
+  name: 'bold' | 'italic' | 'underline' | 'strikethrough' | 'text-code';
   // TO-DO: implement options below
   // | 'monospace'
   // | 'highlight'
@@ -19,27 +19,27 @@ export type InlineCommand = {
 
 export type AlignmentCommand = {
   name:
-    | 'left'
-    | 'center'
-    | 'right'
-    | 'justify'
-    | 'start'
-    | 'end'
-    | 'indent'
-    | 'outdent';
+  | 'left'
+  | 'center'
+  | 'right'
+  | 'justify'
+  | 'start'
+  | 'end'
+  | 'indent'
+  | 'outdent';
 } & ToolbarCommand;
 
 export type BlockCommand = {
   name:
-    | 'normal'
-    | 'heading 1'
-    | 'heading 2'
-    | 'heading 3'
-    | 'heading 4'
-    | 'heading 5'
-    | 'heading 6'
-    | 'blockquote'
-    | 'code';
+  | 'normal'
+  | 'heading 1'
+  | 'heading 2'
+  | 'heading 3'
+  | 'heading 4'
+  | 'heading 5'
+  | 'heading 6'
+  | 'blockquote'
+  | 'code';
 } & ToolbarCommand;
 
 export type ListCommand = {

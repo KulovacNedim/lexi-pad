@@ -60,6 +60,12 @@ export const defaultToolbar: ToolbarConfig = {
           hidden: false,
           icon: 'strikethrough',
         },
+        {
+          name: 'text-code',
+          position: 5,
+          hidden: false,
+          icon: 'code',
+        },
       ],
     },
     {
