@@ -12,6 +12,8 @@ interface ToolbarCommandProps {
 }
 
 export const ToolbarCommand = ({ command, tooltip }: ToolbarCommandProps) => {
+  console.log(88);
+
   const [editor] = useLexicalComposerContext();
 
   const onClickHandler = () => {
@@ -22,9 +24,9 @@ export const ToolbarCommand = ({ command, tooltip }: ToolbarCommandProps) => {
   };
 
   const commandElement = (
-    <div className="lp-command" onClick={onClickHandler}>
+    <button className="lp-command" onClick={onClickHandler}>
       <Icon command={command} />
-    </div>
+    </button>
   );
 
   if (!tooltip) {

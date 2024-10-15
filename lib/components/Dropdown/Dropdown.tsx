@@ -100,7 +100,7 @@ export const Dropdown = ({
           })}
         >
           {commands.map((command) => (
-            <div
+            <button
               key={command.name}
               className={classNames('lp-dropdown-list-item', {
                 'lp-dropdown-list-item-selected':
@@ -110,7 +110,7 @@ export const Dropdown = ({
             >
               <Icon command={command} />
               <span>{capitalizeName(command.name)}</span>
-            </div>
+            </button>
           ))}
         </div>
       )}
