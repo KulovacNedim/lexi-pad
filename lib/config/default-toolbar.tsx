@@ -125,6 +125,7 @@ export const defaultToolbar: ToolbarConfig = {
           hidden: false,
           icon: 'list-bullet',
         },
+        { name: 'check', position: 1, hidden: false, icon: 'check' },
         { name: 'indent', position: 3, hidden: false, icon: 'indent-right' },
         { name: 'outdent', position: 4, hidden: false, icon: 'indent-left' },
       ],

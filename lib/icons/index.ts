@@ -23,3 +23,4 @@ export * from './SvgHeadingH6.tsx';
 export * from './SvgClearFormatting.tsx';
 export * from './SvgQuoteRight.tsx';
 export * from './SvgChevronDown.tsx';
+export * from './SvgCheck.tsx';

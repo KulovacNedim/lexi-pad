@@ -25,7 +25,10 @@ export type CommandName =
     'heading 5' |
     'heading 6' |
     'blockquote' |
-    'code';
+    'code' |
+    'ordered' |
+    'unordered' |
+    'check';
 
 export type LexCommand = LexicalCommand<string | null | undefined>
 export type LexNode = () => ElementNode

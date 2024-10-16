@@ -9,6 +9,8 @@ import { defaultToolbar } from '../../config/default-toolbar';
 import { LexicalComposer } from '@lexical/react/LexicalComposer';
 import { editorConfig } from '../../config/editorConfig';
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin';
+import { ListPlugin } from '@lexical/react/LexicalListPlugin';
+import { CheckListPlugin } from '@lexical/react/LexicalCheckListPlugin';
 
 type EditorProps = RecursivePartial<EditorConfig>;
 
@@ -31,6 +33,8 @@ export const Editor = ({ className = '', toolbar }: EditorProps) => {
         {mergedToolbar.visible && <Toolbar config={mergedToolbar} />}
       </div>
       <HistoryPlugin />
+      <ListPlugin />
+      <CheckListPlugin />
     </LexicalComposer>
   );
 };

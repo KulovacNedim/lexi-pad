@@ -2,7 +2,19 @@
 export default {
   content: ['./lib/**/*.{ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      listStyleType: {
+        disc: 'disc',
+        decimal: 'decimal',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addBase }) {
+      addBase({
+        ul: { listStyleType: 'disc' },
+        ol: { listStyleType: 'decimal' },
+      });
+    },
+  ],
 };

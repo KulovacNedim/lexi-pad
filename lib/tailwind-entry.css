@@ -184,6 +184,7 @@
   font-size: 0.8em;
   vertical-align: sub !important;
 }
+
 .lp-text-superscript {
   font-size: 0.8em;
   vertical-align: super;
@@ -217,55 +218,49 @@
   text-align: right;
   min-width: 25px;
 }
-/* 
-.PlaygroundEditorTheme__link {
-  color: rgb(33, 111, 219);
-  text-decoration: none;
-}
-.PlaygroundEditorTheme__link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
 
-.PlaygroundEditorTheme__ol1 {
+.lp-editor-list-ul {
   padding: 0;
   margin: 0;
   list-style-position: outside;
 }
-.PlaygroundEditorTheme__ol2 {
+
+.lp-editor-list-ol1 {
+  padding: 0;
+  margin: 0;
+  list-style-position: outside;
+}
+
+.lp-editor-list-ol2 {
   padding: 0;
   margin: 0;
   list-style-type: upper-alpha;
   list-style-position: outside;
 }
-.PlaygroundEditorTheme__ol3 {
+
+.lp-editor-list-ol3 {
   padding: 0;
   margin: 0;
   list-style-type: lower-alpha;
   list-style-position: outside;
 }
-.PlaygroundEditorTheme__ol4 {
+
+.lp-editor-list-ol4 {
   padding: 0;
   margin: 0;
   list-style-type: upper-roman;
   list-style-position: outside;
 }
-.PlaygroundEditorTheme__ol5 {
+
+.lp-editor-list-ol5 {
   padding: 0;
   margin: 0;
   list-style-type: lower-roman;
   list-style-position: outside;
 }
-.PlaygroundEditorTheme__ul {
-  padding: 0;
-  margin: 0;
-  list-style-position: outside;
-}
-.PlaygroundEditorTheme__listItem {
-  margin: 0 32px;
-}
-.PlaygroundEditorTheme__listItemChecked,
-.PlaygroundEditorTheme__listItemUnchecked {
+
+.lp-list-item-checked,
+.lp-list-item-unchecked {
   position: relative;
   margin-left: 8px;
   margin-right: 8px;
@@ -274,11 +269,13 @@
   list-style-type: none;
   outline: none;
 }
-.PlaygroundEditorTheme__listItemChecked {
+
+.lp-list-item-checked {
   text-decoration: line-through;
 }
-.PlaygroundEditorTheme__listItemUnchecked:before,
-.PlaygroundEditorTheme__listItemChecked:before {
+
+.lp-list-item-unchecked:before,
+.lp-list-item-checked:before {
   content: '';
   width: 16px;
   height: 16px;
@@ -289,27 +286,32 @@
   background-size: cover;
   position: absolute;
 }
-.PlaygroundEditorTheme__listItemUnchecked[dir='rtl']:before,
-.PlaygroundEditorTheme__listItemChecked[dir='rtl']:before {
+
+.lp-list-item-unchecked[dir='rtl']:before,
+.lp-list-item-checked[dir='rtl']:before {
   left: auto;
   right: 0;
 }
-.PlaygroundEditorTheme__listItemUnchecked:focus:before,
-.PlaygroundEditorTheme__listItemChecked:focus:before {
+
+.lp-list-item-unchecked:focus:before,
+.lp-list-item-checked:focus:before {
   box-shadow: 0 0 0 2px #a6cdfe;
   border-radius: 2px;
 }
-.PlaygroundEditorTheme__listItemUnchecked:before {
+
+.lp-list-item-unchecked:before {
   border: 1px solid #999;
   border-radius: 2px;
 }
-.PlaygroundEditorTheme__listItemChecked:before {
+
+.lp-list-item-checked:before {
   border: 1px solid rgb(61, 135, 245);
   border-radius: 2px;
   background-color: #3d87f5;
   background-repeat: no-repeat;
 }
-.PlaygroundEditorTheme__listItemChecked:after {
+
+.lp-list-item-checked:after {
   content: '';
   cursor: pointer;
   border-color: #fff;
@@ -324,10 +326,31 @@
   transform: rotate(45deg);
   border-width: 0 2px 2px 0;
 }
-.PlaygroundEditorTheme__nestedListItem {
+
+
+.lp-listitem {
+  margin: 0 32px;
+}
+
+.lp-nested-listitem {
   list-style-type: none;
 }
-.PlaygroundEditorTheme__nestedListItem:before,
-.PlaygroundEditorTheme__nestedListItem:after {
+
+.lp-nested-listitem:before,
+.lp-nested-listitem:after {
   display: none;
-} */
+}
+
+  /* 
+  .PlaygroundEditorTheme__link {
+    color: rgb(33, 111, 219);
+    text-decoration: none;
+  }
+  .PlaygroundEditorTheme__link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  } */
+
+  
+
+  

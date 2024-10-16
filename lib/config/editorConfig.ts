@@ -1,6 +1,7 @@
 import Theme from '../config/theme';
 import { HeadingNode, QuoteNode } from '@lexical/rich-text'
 import { CodeNode } from '@lexical/code'
+import { ListItemNode, ListNode } from '@lexical/list'
 
 export const editorConfig = {
     namespace: 'lexipad',
@@ -8,6 +9,8 @@ export const editorConfig = {
         HeadingNode,
         QuoteNode,
         CodeNode,
+        ListNode,
+        ListItemNode,
     ],
     // Handling of errors during update
     onError(error: Error) {

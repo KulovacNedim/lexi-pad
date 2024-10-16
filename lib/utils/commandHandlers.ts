@@ -1,6 +1,7 @@
 import { FORMAT_ELEMENT_COMMAND, FORMAT_TEXT_COMMAND, INDENT_CONTENT_COMMAND, OUTDENT_CONTENT_COMMAND, REDO_COMMAND, UNDO_COMMAND, $createParagraphNode } from "lexical";
 import { $createHeadingNode, $createQuoteNode } from '@lexical/rich-text';
 import { $createCodeNode } from '@lexical/code';
+import { INSERT_ORDERED_LIST_COMMAND, INSERT_UNORDERED_LIST_COMMAND, INSERT_CHECK_LIST_COMMAND } from '@lexical/list';
 
 import { CommandHandlers } from "../types/commandTypes";
 
@@ -128,5 +129,21 @@ export const commandHandlers: CommandHandlers = {
         command: () => $createCodeNode(),
         options: undefined,
         type: 'update'
+    },
+    // lists
+    ordered: {
+        command: INSERT_ORDERED_LIST_COMMAND,
+        options: undefined,
+        type: 'dispatch'
+    },
+    unordered: {
+        command: INSERT_UNORDERED_LIST_COMMAND,
+        options: undefined,
+        type: 'dispatch'
+    },
+    check: {
+        command: INSERT_CHECK_LIST_COMMAND,
+        options: undefined,
+        type: 'dispatch'
     },
 };

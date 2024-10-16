@@ -43,7 +43,7 @@ export type BlockCommand = {
 } & ToolbarCommand;
 
 export type ListCommand = {
-  name: 'unordered' | 'ordered' | 'indent' | 'outdent';
+  name: 'unordered' | 'ordered' | 'indent' | 'outdent' | 'check';
   blockType?: string;
 } & ToolbarCommand;
 
